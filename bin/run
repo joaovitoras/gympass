@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative '../kart'
+
+results = Kart::Parser::Result.parse(ARGV[0])
+race = Kart::Model::Race.new(results)
+
+Kart::Printer.printers.each do |printer|
+  printer.print(race)
+  puts "\n"
+end
