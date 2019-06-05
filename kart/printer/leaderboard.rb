@@ -1,40 +1,29 @@
 module Kart
   module Printer
-    class Leaderboard
-      COLUMNS = {
-        position: '#',
-        id: 'ID',
-        name: 'Nome Piloto',
-        total_race_time: 'Tempo',
-        total_laps: 'Voltas',
-        best_lap: 'Melhor volta'
-      }.freeze
+    class Leaderboard < Printer::Base
+      def initialize(race)
+        @title = 'Leaderboard'
+        select_columns(:position, :id, :name, :total_race_time, :total_laps, :best_lap, :avg_speed, :time_after_winner)
 
-      def self.print(race)
-        output = template
-        puts "Leaderboard\n-----------"
-        puts output % COLUMNS
+        super
+      end
 
-        race.leaderboard.map.with_index do |board, index|
-          puts output % board_subs(index + 1, board)
+      def print_body
+        race.leaderboard.map.with_index(1) do |result, index|
+          puts @template % substitutions(index, result)
         end
       end
 
-      def self.template
-        COLUMNS
-          .keys
-          .map { |column| "%{#{column}}" }
-          .join(" \t")
-      end
-
-      def self.board_subs(position, board)
+      def substitutions(position, result)
         {
           position: position,
-          id: board.pilot.id,
-          name: board.pilot.name,
-          total_race_time: Time.at(board.total_race_time).strftime('%M:%S'),
-          total_laps: board.total_laps,
-          best_lap: board.best_lap.number
+          id: result.pilot.id,
+          name: result.pilot.name,
+          total_race_time: time_output(result.total_race_time),
+          total_laps: result.total_laps,
+          best_lap: result.best_lap.number,
+          avg_speed: result.avg_speed.round(3),
+          time_after_winner: time_output(result.time_after_winner(race.winner_lap))
         }
       end
     end

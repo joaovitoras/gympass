@@ -7,6 +7,14 @@ module Kart
         @id = id
         @name = name
       end
+
+      def hash
+        id.hash
+      end
+
+      def eql?(other)
+        id == other.id
+      end
     end
   end
 end

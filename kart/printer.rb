@@ -1,5 +1,6 @@
-require_relative 'printer/leaderboard'
+require_relative 'printer/base'
 require_relative 'printer/best_lap'
+require_relative 'printer/leaderboard'
 
 module Kart
   module Printer

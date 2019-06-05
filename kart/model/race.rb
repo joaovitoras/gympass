@@ -16,6 +16,10 @@ module Kart
           .map { |result| [result.pilot, result.best_lap] }
           .min_by { |_, best_lap| best_lap.duration_time }
       end
+
+      def winner_lap
+        leaderboard.first.laps.last
+      end
     end
   end
 end
