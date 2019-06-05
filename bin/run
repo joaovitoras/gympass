@@ -6,6 +6,6 @@ results = Kart::Parser::Result.parse(ARGV[0])
 race = Kart::Model::Race.new(results)
 
 Kart::Printer.printers.each do |printer|
-  printer.print(race)
+  printer.new(race).print
   puts "\n"
 end
