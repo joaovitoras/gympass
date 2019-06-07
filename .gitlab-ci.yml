@@ -10,11 +10,11 @@ before_script:
 
 rubocop:
   script:
-    - rubocop
+    - bin/rubocop
 
 rspec:
   script:
-    - rspec rspec
+    - bin/rspec rspec
   coverage: /LOC \((\d+.\d+)%/
   artifacts:
     paths:
