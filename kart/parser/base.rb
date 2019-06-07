@@ -12,13 +12,17 @@ module Kart
       def parse
         @input = self.class::REGEX.match(@input)
 
-        raise ArgumentError, "Invalid #{class_name} input" if @input.nil?
+        invalid_input if @input.nil?
       end
 
       private
 
       def class_name
         self.class.name.demodulize
+      end
+
+      def invalid_input
+        raise ArgumentError, "Invalid #{class_name} input"
       end
     end
   end
