@@ -3,7 +3,7 @@ module Kart
     class Number < Parser::Base
       def parse
         Integer(@input)
-      rescue StandardError => _
+      rescue StandardError => _e
         invalid_input
       end
     end

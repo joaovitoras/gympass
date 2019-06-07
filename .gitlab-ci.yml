@@ -2,11 +2,10 @@ image: ruby:2.6
 
 cache:
   paths:
-    - vendor/ruby
+    - vendor/bundle
 
 before_script:
-  - gem install bundler
-  - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
+  - bundle install --jobs $(nproc) "${FLAGS[@]}" --path=vendor/bundle
 
 rubocop:
   script:

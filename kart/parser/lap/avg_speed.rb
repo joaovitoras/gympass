@@ -3,7 +3,7 @@ module Kart
     class AvgSpeed < Parser::Base
       def parse
         Float(@input.tr(',', '.'))
-      rescue StandardError => _
+      rescue StandardError => _e
         invalid_input
       end
     end

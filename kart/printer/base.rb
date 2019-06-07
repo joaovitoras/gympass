@@ -11,7 +11,7 @@ module Kart
         total_laps: 'Voltas', # Total de voltas
         best_lap: 'M.V.', # Melhor volta
         avg_speed: 'V.M.', # Tempo medio de velocidade
-        time_after_winner: 'D. Vencedor' # Diferença do vencedor
+        time_after_winner: 'D. Vencedor' # Diferenca do vencedor
       }.freeze
 
       def initialize(race)

@@ -4,7 +4,7 @@ module Kart
       def parse
         minutes, seconds = @input.split(':')
         (Float(minutes) * 60) + Float(seconds)
-      rescue StandardError => _
+      rescue StandardError => _e
         invalid_input
       end
     end

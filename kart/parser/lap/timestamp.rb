@@ -5,7 +5,7 @@ module Kart
     class Timestamp < Parser::Base
       def parse
         Time.parse(@input)
-      rescue StandardError => _
+      rescue StandardError => _e
         invalid_input
       end
     end
