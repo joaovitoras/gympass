@@ -5,6 +5,7 @@ cache:
     - vendor/ruby
 
 before_script:
+  - gem install bundler
   - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
 
 rubocop:
