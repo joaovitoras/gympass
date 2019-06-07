@@ -6,7 +6,7 @@ describe Kart::Parser::AvgSpeed do
   subject { parser.parse }
 
   describe '#parse' do
-    describe 'With valid input' do
+    context 'With valid input' do
       let(:input) { '44,275' }
 
       it do
@@ -14,8 +14,8 @@ describe Kart::Parser::AvgSpeed do
       end
     end
 
-    describe 'With invalid input' do
-      let(:input) { '22 A' }
+    context 'With invalid input' do
+      let(:input) { '22.A' }
 
       it 'raise error' do
         expect { subject }.to raise_exception(ArgumentError, 'Invalid AvgSpeed input')

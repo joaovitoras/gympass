@@ -6,13 +6,13 @@ describe Kart::Parser::Number do
   subject { parser.parse }
 
   describe '#parse' do
-    describe 'With valid input' do
+    context 'With valid input' do
       let(:input) { '1' }
 
       it { is_expected.to be(1) }
     end
 
-    describe 'With invalid input' do
+    context 'With invalid input' do
       let(:input) { 'A' }
 
       it 'raise error' do

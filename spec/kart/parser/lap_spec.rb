@@ -20,7 +20,7 @@ describe Kart::Parser::Lap do
         )
       end
 
-      describe 'With less data' do
+      context 'With less data' do
         let(:input) { '23:49:08.277 2 1:02.852' }
 
         it 'raise error' do

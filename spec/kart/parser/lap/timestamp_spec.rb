@@ -6,7 +6,7 @@ describe Kart::Parser::Timestamp do
   subject { parser.parse }
 
   describe '#parse' do
-    describe 'With valid input' do
+    context 'With valid input' do
       let(:input) { '23:49:08' }
 
       it do
@@ -18,7 +18,7 @@ describe Kart::Parser::Timestamp do
       end
     end
 
-    describe 'With invalid input' do
+    context 'With invalid input' do
       let(:input) { '23 49 08' }
 
       it 'raise error' do
