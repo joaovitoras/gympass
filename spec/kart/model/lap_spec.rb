@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 
 describe Kart::Model::Lap do
   describe '#new' do

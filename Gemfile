@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'factory_bot'
-gem 'pry'
 gem 'rspec'
-gem 'rubocop'
+gem 'rubocop', require: false
 gem 'simplecov', require: false
