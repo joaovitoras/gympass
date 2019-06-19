@@ -6,6 +6,7 @@ cache:
 
 before_script:
   - export LC_ALL=en_US.UTF-8
+  - locale-gen en_US.UTF-8
   - gem install bundler:2.0.1
   - bundle install --jobs $(nproc) "${FLAGS[@]}" --path=vendor/bundle
 
@@ -15,6 +16,8 @@ rubocop:
 
 rspec:
   script:
+    - export LC_ALL=en_US.UTF-8
+    - locale-gen en_US.UTF-8
     - bundle exec rspec
   coverage: /LOC \((\d+.\d+)%/
   artifacts:
