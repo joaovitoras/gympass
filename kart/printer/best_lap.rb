@@ -9,6 +9,8 @@ module Kart
         super
       end
 
+      private
+
       def print_body
         puts @template % substitutions
       end

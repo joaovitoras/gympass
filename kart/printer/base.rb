@@ -24,6 +24,8 @@ module Kart
         print_body
       end
 
+      private
+
       def print_title
         puts @title + "\n#{'-' * @title.size}"
       end
