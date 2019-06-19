@@ -27,10 +27,14 @@ module Kart
       private
 
       def print_title
+        raise 'Title is not set' if @title.nil?
+
         puts @title + "\n#{'-' * @title.size}"
       end
 
       def print_header
+        raise 'Template is not set' if @template.nil?
+
         puts @template % @columns
       end
 
