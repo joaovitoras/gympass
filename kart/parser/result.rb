@@ -7,6 +7,8 @@ module Kart
         @input = @input.map { |line| line_to_lap_data(line) }
         @input = group_by_pilot
         generate_result
+      rescue StandardError => _e
+        invalid_input
       end
 
       private
