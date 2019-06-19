@@ -31,7 +31,7 @@ describe Kart::Model::Race do
   subject { race }
 
   describe '#new' do
-    it { is_expected.to be_a_kind_of(Kart::Model::Race) }
+    it { is_expected.to be_a_kind_of(described_class) }
   end
 
   describe '#leaderboard' do

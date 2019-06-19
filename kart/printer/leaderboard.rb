@@ -8,6 +8,8 @@ module Kart
         super
       end
 
+      private
+
       def print_body
         race.leaderboard.map.with_index(1) do |result, index|
           puts @template % substitutions(index, result)

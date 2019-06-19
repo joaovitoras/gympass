@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Kart::Parser::AvgSpeed do
-  let(:parser) { Kart::Parser::AvgSpeed.new(input) }
+  let(:parser) { described_class.new(input) }
 
   subject { parser.parse }
 

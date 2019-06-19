@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Kart::Parser::Lap do
-  let(:parser) { Kart::Parser::Lap.new(input) }
+  let(:parser) { described_class.new(input) }
 
   subject { parser.parse }
 

@@ -15,6 +15,6 @@ describe Kart::Model::Lap do
       )
     end
 
-    it { is_expected.to be_a_kind_of(Kart::Model::Lap) }
+    it { is_expected.to be_a_kind_of(described_class) }
   end
 end

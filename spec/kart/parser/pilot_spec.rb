@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Kart::Parser::Pilot do
-  let(:parser) { Kart::Parser::Pilot.new(input) }
+  let(:parser) { described_class.new(input) }
 
   subject { parser.parse }
 
