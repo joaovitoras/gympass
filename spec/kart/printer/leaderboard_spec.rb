@@ -17,7 +17,7 @@ describe Kart::Printer::Leaderboard do
       [
         "Leaderboard\n-----------",
         "# \tID \tNome Piloto \tTempo \tVoltas \tM.V. \tV.M. \tD. Vencedor",
-        "1 \t4 \tJohn \t00:09 \t1 \t1 \t40.0 \t00:00"
+        "1 \t#{pilot.id} \tJohn \t00:09 \t1 \t1 \t40.0 \t00:00"
       ]
     end
 

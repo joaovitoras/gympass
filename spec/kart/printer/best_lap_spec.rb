@@ -18,7 +18,7 @@ describe Kart::Printer::BestLap do
       [
         "Best lap\n--------",
         "ID \tNome Piloto \tTempo \tVoltas \tV.M.",
-        "2 \tJohn \t00:09 \t1 \t40.0"
+        "#{pilot.id} \tJohn \t00:09 \t1 \t40.0"
       ]
     end
 
