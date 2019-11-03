@@ -1,6 +1,8 @@
 # Gympass test
 CI [GitLab](https://gitlab.com/joaovitoras/gympass/pipelines)
 
+Coverage [Coverage](https://joaovitoras.gitlab.io/gympass/coverage/#_AllFiles)
+
 ## Iniciando
 
 ### Clone o repositório
